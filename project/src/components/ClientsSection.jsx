@@ -5,20 +5,20 @@ import ClientCard from './ClientCard';
 const ClientsSection = () => {
   const clients = [
     {
-      name: "Mamta Saree",
-      logo: "/Clients/MamtaSaree.webp",
+      name: "Mansi Suit & Saree",
+      logo: "/Clients/MansiSuitSaree.jpg",
       description: "Leading fashion retailer specializing in traditional sarees and ethnic wear.",
       industry: "Fashion Retail"
     },
     {
-      name: "Paridhan",
-      logo: "/Clients/Paridhan.webp",
+      name: "Roop Milan",
+      logo: "/Clients/roop milan.png",
       description: "Premium fashion brand offering a wide range of contemporary clothing options.",
       industry: "Fashion Retail"
     },
     {
-      name: "Sheesh Mahal Saree Wala",
-      logo: "/Clients/SheeshMahalSareeWala.webp",
+      name: "Shivam Textile",
+      logo: "/Clients/Shivam Textile.jpg",
       description: "Renowned saree retailer known for exquisite designs and premium quality fabrics.",
       industry: "Fashion Retail"
     },
@@ -34,12 +34,12 @@ const ClientsSection = () => {
       description: "Celebration wear retailer offering festive clothing and accessories for all occasions.",
       industry: "Fashion Retail"
     },
-    // {
-    //   name: "Neha Saree",
-    //   logo: "/Clients/nehasareemzf.webp",
-    //   description: "Boutique saree shop with a curated collection of designer and handcrafted sarees.",
-    //   industry: "Fashion Retail"
-    // }
+    {
+      name: "Rudraksha",
+      logo: "/Clients/rudraksha.jpg",
+      description: "Boutique saree shop with a curated collection of designer and handcrafted sarees.",
+      industry: "Fashion Retail"
+    }
   ];
 
   return (
