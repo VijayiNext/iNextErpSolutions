@@ -78,13 +78,13 @@ const Footer = () => {
                 <div>
                   <p className="text-white">
                     <a 
-                      href="https://maps.google.com/?q=Electronics+City+Metro+Station+H-43+Sector+63" 
+                       href="https://maps.google.com/?q=H-43,+Wazidpur,+Rasoolpur,+Sector+63,+Noida,+Uttar+Pradesh+201301" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="hover:text-[#6495ed] transition-colors"
                     >
                       <strong>Corporate Office:</strong><br />
-                      Near Electronics City Metro Station H-43, Sector 63
+                      H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301
                     </a>
                   </p>
                 </div>
@@ -95,6 +95,7 @@ const Footer = () => {
                   <a href="tel:9220034859" className="text-white hover:text-[#6495ed] transition-colors">9220034859</a>
                   <a href="tel:9220034860" className="text-white hover:text-[#6495ed] transition-colors">9220034860</a>
                   <a href="tel:9220034861" className="text-white hover:text-[#6495ed] transition-colors">9220034861</a>
+                  <a href="tel:01204171793" className="text-white hover:text-[#6495ed] transition-colors">0120-4171793 (Landline)</a>
                 </div>
               </li>
               <li className="flex items-center space-x-3">
