@@ -28,7 +28,6 @@ const ClientsCarousel = () => {
     { name: "Tanjor", logo: "/Clients/Tanjor.webp" },
     { name: "Roop Milan", logo: "/Clients/roop milan.png" },
     { name: "UTSAV", logo: "/Clients/UTSAV.webp" },
-    { name: "Neha Saree", logo: "/Clients/nehasareemzf.webp" },
     { name: "Vandana", logo: "/Clients/vandana.webp" },
     { name: "Rudraksha", logo: "/Clients/rudraksha.jpg" },
   ];
