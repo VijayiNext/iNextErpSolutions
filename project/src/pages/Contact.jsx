@@ -6,6 +6,9 @@ import { Mail, User, Building, MessageSquare, MapPin, Phone, Send, CheckCircle, 
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import emailjs from 'emailjs-com';
+import LeafletMap from '../components/LeafletMap';
+
+
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -13,6 +16,9 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [phoneError, setPhoneError] = useState('');
+  const address = "H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301";
+
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,10 +60,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        "service_kcdgjkn",
+        "template_g4gwmo7",
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        "F2tTKnOXIv5menGxL"
       );
 
       setIsSubmitting(false);
@@ -148,12 +154,12 @@ const Contact = () => {
                       <div className="text-muted-foreground mt-1">
                         <p>
                           <a
-                            href="https://maps.google.com/?q=Electronics+City+Metro+Station+H-43+Sector+63"
+                            href="https://maps.google.com/?q=H-43,+Wazidpur,+Rasoolpur,+Sector+63,+Noida,+Uttar+Pradesh+201301"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-primary transition-colors"
                           >
-                            Near Electronics City Metro Station H-43, Sector 63
+                            H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301
                           </a>
                         </p>
                       </div>
@@ -184,6 +190,7 @@ const Contact = () => {
                         <a href="tel:9220034859" className="hover:text-primary transition-colors block">9220034859</a>
                         <a href="tel:9220034860" className="hover:text-primary transition-colors block">9220034860</a>
                         <a href="tel:9220034861" className="hover:text-primary transition-colors block">9220034861</a>
+                        <a href="tel:01204171793" className="hover:text-primary transition-colors block">0120-4171793 (Landline)</a>
                       </p>
                     </div>
                   </div>
@@ -347,6 +354,12 @@ const Contact = () => {
                   </Button>
                 </form>
               </div>
+            </div>
+          </div>
+
+          <div className="animate-fade-up relative top-10" style={{ animationDelay: '0.3s' }}>
+            <div className="bg-card rounded-2xl shadow-lg p-4 border border-border/30 h-96">
+              <LeafletMap address={address} />
             </div>
           </div>
         </div>
