@@ -16,7 +16,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [phoneError, setPhoneError] = useState('');
-  const address = "H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301";
+  const address = "H-43, Sector 63, Noida, Uttar Pradesh 201301";
 
 
 
@@ -154,12 +154,12 @@ const Contact = () => {
                       <div className="text-muted-foreground mt-1">
                         <p>
                           <a
-                            href="https://maps.google.com/?q=H-43,+Wazidpur,+Rasoolpur,+Sector+63,+Noida,+Uttar+Pradesh+201301"
+                            href="https://maps.google.com/?q=H-43,+Sector+63,+Noida,+Uttar+Pradesh+201301"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-primary transition-colors"
                           >
-                            H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301
+                            H-43, Sector 63, Noida, Uttar Pradesh 201301
                           </a>
                         </p>
                       </div>
