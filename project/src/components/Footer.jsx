@@ -84,7 +84,7 @@ const Footer = () => {
                       className="hover:text-[#6495ed] transition-colors"
                     >
                       <strong>Corporate Office:</strong><br />
-                      H-43, Wazidpur, Rasoolpur, Sector 63, Noida, Uttar Pradesh 201301
+                      H-43, Sector 63, Noida, Uttar Pradesh 201301
                     </a>
                   </p>
                 </div>
