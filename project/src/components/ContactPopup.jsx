@@ -53,7 +53,7 @@ const ContactPopup = ({ open, onOpenChange }) => {
         from_name: name,
         phone_number: phone,
         message: formattedMessage,
-        to_email: "amanag17100@gmail.com",
+        to_email: "info@inexterpsolutions.com",
       };
 
       await emailjs.send(
