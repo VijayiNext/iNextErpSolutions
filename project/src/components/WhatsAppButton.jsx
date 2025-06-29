@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "8527262031"; // This is the number for WhatsApp
+  const phoneNumber = "9220034860"; // This is the number for WhatsApp
   
   useEffect(() => {
     // Close the popup when clicking outside
