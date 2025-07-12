@@ -60,7 +60,7 @@ const ClientsCarousel = () => {
     const animate = () => {
       const contentWidth = contentEl.scrollWidth;
       const containerWidth = carousel.offsetWidth;
-      const itemWidth = contentWidth / (clients.length * 2); // Total items (original + clones)
+      const itemWidth = contentWidth / (clients.length * 4); // Total items (original + clones)
 
       // Move content continuously
       setPosition(prev => {
