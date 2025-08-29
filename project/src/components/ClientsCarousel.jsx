@@ -14,6 +14,7 @@ const ClientsCarousel = () => {
   // Client logos from public/Clients directory
   const clients = [
     { name: "BansalGroup", logo: "/Clients/BansalGroup.jpg" },
+    { name: "BansalGroup", logo: "/Clients/bansalsaree.jpg.jpg" },
     { name: "VandanaBW", logo: "/Clients/VandanaBW.jpg" },
     { name: "WonderBazar", logo: "/Clients/WonderBazar.jpg" },
     { name: "Mansi Suit & Saree", logo: "/Clients/MansiSuitSaree.jpg" },
