@@ -96,7 +96,7 @@ const App = () => {
     }, 2000);
 
     if (window.location.pathname === "/") {
-      setTimeout(() => setLoading(false), 1200);
+      setTimeout(() => setLoading(false), 500);
     } else {
       setLoading(false);
     }

@@ -13,28 +13,32 @@ const ClientsCarousel = () => {
 
   // Client logos from public/Clients directory
   const clients = [
-    { name: "BansalGroup", logo: "/Clients/BansalGroup.jpg" },
-    { name: "BansalGroup", logo: "/Clients/bansalsaree.jpg.jpg" },
-    { name: "VandanaBW", logo: "/Clients/VandanaBW.jpg" },
-    { name: "WonderBazar", logo: "/Clients/WonderBazar.jpg" },
+    { name: "Bansal Group", logo: "/Clients/BansalGroup.jpg" },
+    { name: "Bansal Saree", logo: "/Clients/bansalsaree.jpg" },
+    { name: "Bansal Saree NX", logo: "/Clients/bansalsaree.jpg" },
+    { name: "Vandana BW", logo: "/Clients/VandanaBW.jpg" },
+    { name: "Wonder Bazar", logo: "/Clients/WonderBazar.jpg" },
     { name: "Mansi Suit & Saree", logo: "/Clients/MansiSuitSaree.jpg" },
-    { name: "NehaSaree", logo: "/Clients/NehaSaree.jpg" },
-    { name: "tanaBanaSaree", logo: "/Clients/TanaBanaSaree.jpg" },
-    { name: "BatraBrothers", logo: "/Clients/BatraBrothers.jpg" },
+    { name: "Neha Saree", logo: "/Clients/NehaSaree.jpg" },
+    { name: "Tana Bana Saree", logo: "/Clients/TanaBanaSaree.jpg" },
+    { name: "Batra Brothers", logo: "/Clients/BatraBrothers.jpg" },
     { name: "GMS", logo: "/Clients/GMS.jpg" },
     { name: "Mamta Saree", logo: "/Clients/MamtaSaree.webp" },
     { name: "Mansi", logo: "/Clients/Mansi.jpg" },
-    { name: "RoyalTrading", logo: "/Clients/RoyalTrading.jpg" },
+    { name: "Royal Trading", logo: "/Clients/RoyalTrading.jpg" },
     { name: "Tara", logo: "/Clients/Tara.jpg" },
     { name: "Paridhan", logo: "/Clients/Paridhan.webp" },
     { name: "Shivam Textile", logo: "/Clients/Shivam Textile.jpg" },
-    { name: "vastrakala", logo: "/Clients/vastrakala.jpeg" },
+    { name: "Vastrakala", logo: "/Clients/vastrakala.jpeg" },
     { name: "Sheesh Mahal Saree Wala", logo: "/Clients/SheeshMahalSareeWala.webp" },
     { name: "Tanjor", logo: "/Clients/Tanjor.webp" },
     { name: "Roop Milan", logo: "/Clients/roop milan.png" },
     { name: "UTSAV", logo: "/Clients/UTSAV.webp" },
     { name: "Vandana", logo: "/Clients/vandana.webp" },
     { name: "Rudraksha", logo: "/Clients/rudraksha.jpg" },
+    { name: "Agarwal Saree", logo: "/Clients/agarwalsaree.jpg" },
+    { name: "Aggarwal Saree Centre", logo: "/Clients/agarwalsaree.jpg" },
+    { name: "Kamni Sarees", logo: "/Clients/kaminisarees.jpg" },
   ];
 
   useEffect(() => {
@@ -121,6 +125,13 @@ const ClientsCarousel = () => {
                     alt={client.name}
                     className="max-h-full max-w-full object-contain p-2"
                     loading="eager"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${client.logo}`);
+                      e.target.style.display = 'none';
+                    }}
+                    onLoad={() => {
+                      console.log(`Successfully loaded: ${client.logo}`);
+                    }}
                   />
                 </div>
               </div>
