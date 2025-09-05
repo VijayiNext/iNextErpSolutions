@@ -5,8 +5,8 @@ import ClientCard from './ClientCard';
 const ClientsSection = () => {
   const clients = [
     {
-      name: "Mansi Suit & Saree",
-      logo: "/Clients/MansiSuitSaree.jpg",
+      name: "Vandana BW",
+      logo: "/Clients/VandanaBW.jpg",
       description: "Leading fashion retailer specializing in traditional sarees and ethnic wear.",
       industry: "Fashion Retail"
     },
@@ -29,14 +29,14 @@ const ClientsSection = () => {
       industry: "Fashion Retail"
     },
     {
-      name: "UTSAV",
-      logo: "/Clients/UTSAV.webp",
+      name: "Bansal Group",
+      logo: "/Clients/BansalGroup.jpg",
       description: "Celebration wear retailer offering festive clothing and accessories for all occasions.",
       industry: "Fashion Retail"
     },
     {
-      name: "Rudraksha",
-      logo: "/Clients/rudraksha.jpg",
+      name: "Kamini Sarees",
+      logo: "/Clients/kaminisarees.jpg",
       description: "Boutique saree shop with a curated collection of designer and handcrafted sarees.",
       industry: "Fashion Retail"
     }
