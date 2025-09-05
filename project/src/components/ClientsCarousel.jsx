@@ -38,7 +38,6 @@ const ClientsCarousel = () => {
     { name: "Rudraksha", logo: "/Clients/rudraksha.jpg" },
     { name: "Agarwal Saree", logo: "/Clients/agarwalsaree.jpg" },
     { name: "Aggarwal Saree Centre", logo: "/Clients/agarwalsaree.jpg" },
-    { name: "Kamni Sarees", logo: "/Clients/kaminisarees.jpg" },
   ];
 
   useEffect(() => {
