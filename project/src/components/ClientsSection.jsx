@@ -11,8 +11,8 @@ const ClientsSection = () => {
       industry: "Fashion Retail"
     },
     {
-      name: "Roop Milan",
-      logo: "/Clients/roop milan.png",
+      name: "Vastrakala",
+      logo: "/Clients/vastrakala.jpeg",
       description: "Premium fashion brand offering a wide range of contemporary clothing options.",
       industry: "Fashion Retail"
     },
