@@ -15,7 +15,7 @@ const ClientsCarousel = () => {
   const clients = [
     { name: "Bansal Group", logo: "/Clients/BansalGroup.jpg" },
     { name: "Bansal Saree", logo: "/Clients/bansalsaree.jpg" },
-    { name: "Agarwal Saree", logo: "/Clients/agarwalsaree.jpg" },
+    { name: "Kamini Sarees", logo: "/Clients/kaminisarees.jpg" },
     { name: "Vandana BW", logo: "/Clients/VandanaBW.jpg" },
     { name: "Wonder Bazar", logo: "/Clients/WonderBazar.jpg" },
     { name: "Mansi Suit & Saree", logo: "/Clients/MansiSuitSaree.jpg" },
