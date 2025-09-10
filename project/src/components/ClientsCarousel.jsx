@@ -34,10 +34,8 @@ const ClientsCarousel = () => {
     { name: "Tanjor", logo: "/Clients/Tanjor.webp" },
     { name: "Roop Milan", logo: "/Clients/roop milan.png" },
     { name: "UTSAV", logo: "/Clients/UTSAV.webp" },
-    { name: "Vandana", logo: "/Clients/vandana.webp" },
     { name: "Rudraksha", logo: "/Clients/rudraksha.jpg" },
     { name: "Agarwal Saree", logo: "/Clients/agarwalsaree.jpg" },
-    { name: "Aggarwal Saree Centre", logo: "/Clients/agarwalsaree.jpg" },
   ];
 
   useEffect(() => {
