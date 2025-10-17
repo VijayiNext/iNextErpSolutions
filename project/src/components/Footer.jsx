@@ -59,7 +59,7 @@ const Footer = () => {
             
             <h4 className="font-semibold text-lg mb-3 mt-6">Download Our App</h4>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="flex items-center bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition-colors">
+              <a href="https://apps.apple.com/in/app/inexterp-solutions/id6751819828" className="flex items-center bg-gray-800 rounded-lg p-2 hover:bg-gray-700 transition-colors">
                 <FaAppStore size={20} className="text-[#6495ed] mr-2" />
                 <span>App Store</span>
               </a>
@@ -92,9 +92,9 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-[#6495ed] flex-shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:9220034859" className="text-white hover:text-[#6495ed] transition-colors">9220034859</a>
-                  <a href="tel:9220034860" className="text-white hover:text-[#6495ed] transition-colors">9220034860</a>
-                  <a href="tel:9220034861" className="text-white hover:text-[#6495ed] transition-colors">9220034861</a>
+                  <a href="tel:9211995153" className="text-white hover:text-[#6495ed] transition-colors">9211995153</a>
+                  <a href="tel:9211995154" className="text-white hover:text-[#6495ed] transition-colors">9211995154</a>
+                  <a href="tel:9211995155" className="text-white hover:text-[#6495ed] transition-colors">9211995155</a>
                   <a href="tel:01204171793" className="text-white hover:text-[#6495ed] transition-colors">0120-4171793 (Landline)</a>
                 </div>
               </li>
