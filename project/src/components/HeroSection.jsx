@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const carouselContent = [
   {
     image: "/banner1.webp",
-    title: "Quit speculating and begin to know. Transform the way you manage your inventory.",
+    title: "ERP Software for Retail and Business by iNextERP Solutions",
     subtitle: "With smart, cloud-based inventory systems, Inexterpsolution enables retailers to increase productivity and profitability."
   },
   {
@@ -14,7 +14,7 @@ const carouselContent = [
   },
   {
     image: "/banner3.webp",
-    title: "Empower Your Team with Data-Driven Decisions",
+    title: "Optimize Your Supply Chain with Real-Time Insights",
     subtitle: "Equip your team with intuitive dashboards and real-time reports. From inventory tracking to sales performance, our tools turn complex data into actionable insights for smarter decision-making."
   },
   {
