@@ -92,9 +92,8 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-[#6495ed] flex-shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:9211995153" className="text-white hover:text-[#6495ed] transition-colors">9211995153</a>
-                  <a href="tel:9211995154" className="text-white hover:text-[#6495ed] transition-colors">9211995154</a>
-                  <a href="tel:9211995155" className="text-white hover:text-[#6495ed] transition-colors">9211995155</a>
+                  <a href="tel:8178844159" className="text-white hover:text-[#6495ed] transition-colors">8178844159</a>
+                  <a href="tel:8527262031" className="text-white hover:text-[#6495ed] transition-colors">8527262031</a>
                   <a href="tel:01204171793" className="text-white hover:text-[#6495ed] transition-colors">0120-4171793 (Landline)</a>
                 </div>
               </li>
