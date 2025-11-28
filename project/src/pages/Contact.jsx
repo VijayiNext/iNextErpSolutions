@@ -187,6 +187,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium">Call Us</h3>
                       <p className="text-muted-foreground mt-1">
+                        <a href="8178844159" className="hover:text-primary transition-colors block">8178844159</a>
+                        <a href="8527262031" className="hover:text-primary transition-colors block">8527262031</a>
                         <a href="tel:01204171793" className="hover:text-primary transition-colors block">0120-4171793 (Landline)</a>
                       </p>
                     </div>
