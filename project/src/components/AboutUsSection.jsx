@@ -44,7 +44,7 @@ const AboutUsSection = () => {
       <div className="container mx-auto px-4" ref={aboutRef}>
         <div className="text-center mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-all duration-700">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
-            About Us
+            About Us!
             <div className="absolute -bottom-2 left-0 right-0 w-full h-1 bg-primary/70 rounded-full"></div>
           </h2>
           <p className="text-lg text-muted-foreground mt-6 max-w-3xl mx-auto">
