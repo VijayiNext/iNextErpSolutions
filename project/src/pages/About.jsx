@@ -86,7 +86,7 @@ const About = () => {
                     <div className="container mx-auto px-4 md:px-6">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4 animate-on-scroll opacity-0 transform -translate-y-10 transition-all duration-700">
-                                Our Core Values
+                                Our Core Valueees
                             </h2>
                             <p className="text-lg text-muted-foreground max-w-3xl mx-auto animate-on-scroll opacity-0 transform -translate-y-10 transition-all duration-700 delay-100">
                                 These principles guide everything we do at InextERP Solutions
