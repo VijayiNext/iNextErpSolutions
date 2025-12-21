@@ -78,15 +78,15 @@ const InventoryService = () => {
                 transition={{ duration: 0.8 }}
               >
                 <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-                  Inventory Management
+                  Inventory Management Software
                 </span>
                 
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-700">
-                  A comprehensive inventory management tool that increases revenue
+                  Inventory Management Software | iNextERP Solutions
                 </h1>
                 
                 <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-                  With iNextERP's top inventory management software in India, you can take charge of your company. Make quick decisions for greater profits by using real-time data into turnover ratio, stock age, and top-selling items.
+                  Efficient inventory management software to track stock, avoid stockouts & manage warehouses. Ideal for retail, distribution & manufacturing businesses.
                 </p>
                 
                 <Link to="/contact" className="flex flex-col sm:flex-row items-center justify-center gap-4">
