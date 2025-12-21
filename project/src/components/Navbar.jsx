@@ -5,11 +5,9 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,47 +16,16 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    // Close mobile menu when route changes
     setIsMenuOpen(false);
   }, [location]);
 
-  const getHref = (sectionId) => {
-    if (location.pathname !== '/') {
-      return `/#${sectionId}`;
-    }
-    return `#${sectionId}`;
-  };
-
-  const handleNavClick = (e, sectionId, offset = 20) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const element = document.getElementById(sectionId);
-      if (element) {
-        // Get the position of the element relative to the viewport
-        const elementPosition = element.getBoundingClientRect().top;
-        
-        // Scroll to the position, subtracting the offset value
-        window.scrollTo({
-          top: window.pageYOffset + elementPosition - 50,
-          behavior: 'smooth',
-        });
-      }
-    }
-  };
-  
-  // Updated services array with links to individual service pages
   const services = [
     { title: 'Inventory Management', href: '/services/inventory' },
     { title: 'POS System', href: '/services/pos' },
@@ -69,7 +36,6 @@ const Navbar = () => {
     { title: 'HRM', href: '/services/hrm' },
   ];
 
-  // Products array with links to individual product pages
   const products = [
     { title: 'Barcode Printer', href: '/products/barcode' },
     { title: 'Labels', href: '/products/label' },
@@ -79,48 +45,43 @@ const Navbar = () => {
     { title: 'Scanner', href: '/products/scanner' },
   ];
 
-  // Legal pages
   const legalPages = [
     { title: 'Privacy Policy', href: '/privacy' },
     { title: 'Terms & Conditions', href: '/terms' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-      ? 'bg-white/80 backdrop-blur-lg shadow-md py-2'
-      : 'bg-transparent py-4'
-      }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/80 backdrop-blur-lg shadow-md py-2'
+          : 'bg-transparent py-4'
+      }`}
+    >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to={getHref('hero')} onClick={(e) => handleNavClick(e, 'hero')} className="flex items-center">
-          <img src='/Logo.webp' className='w-16 h-16 mr-3' alt="Logo" />
-          <span className="text-2xl md:text-3xl font-bold text-[#1881c4]">iNextERP</span>
+        <Link to="/" className="flex items-center">
+          <img src="/Logo.webp" className="w-16 h-16 mr-3" alt="Logo" />
+          <span className="text-2xl md:text-3xl font-bold text-[#1881c4]">
+            iNextERP
+          </span>
         </Link>
 
+        {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link
-            to="/about"
-            className="text-foreground hover:text-[#6495ed] transition-colors"
-          >
-            About Us
-          </Link>
-          
-          {/* Services dropdown using NavigationMenu */}
+          <Link to="/about" className="hover:text-[#6495ed]">About Us</Link>
+
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 h-auto">
-                  <span className="text-foreground hover:text-[#6495ed] transition-colors">Services</span>
+                <NavigationMenuTrigger className="bg-transparent p-0">
+                  Services
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="min-w-[200px]">
-                  <ul className="grid gap-1 p-2">
-                    {services.map((service, i) => (
+                <NavigationMenuContent>
+                  <ul className="p-2">
+                    {services.map((s, i) => (
                       <li key={i}>
-                        <Link
-                          to={service.href}
-                          className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="text-sm font-medium">{service.title}</div>
+                        <Link to={s.href} className="block p-2 hover:bg-accent">
+                          {s.title}
                         </Link>
                       </li>
                     ))}
@@ -129,24 +90,19 @@ const Navbar = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          
-          {/* Products dropdown using NavigationMenu */}
+
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 h-auto">
-                  <span className="text-foreground hover:text-[#6495ed] transition-colors">Products</span>
+                <NavigationMenuTrigger className="bg-transparent p-0">
+                  Products
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="min-w-[200px]">
-                  <ul className="grid gap-1 p-2">
-                    {products.map((product, i) => (
+                <NavigationMenuContent>
+                  <ul className="p-2">
+                    {products.map((p, i) => (
                       <li key={i}>
-                        <Link
-                          to={product.href}
-                          className="block select-none space-y-1 rounded-md p-3 hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="text-sm font-medium">{product.title}</div>
+                        <Link to={p.href} className="block p-2 hover:bg-accent">
+                          {p.title}
                         </Link>
                       </li>
                     ))}
@@ -155,143 +111,85 @@ const Navbar = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          
-          <Link
-            to="/blog"
-            className="text-foreground hover:text-[#6495ed] transition-colors"
-          >
-            Blog
-          </Link>
-          <Link
-            to="/careers"
-            className="text-foreground hover:text-[#6495ed] transition-colors"
-          >
-            Careers
-          </Link>
-          <Link
-            to="/contact"
-            className="text-foreground hover:text-[#6495ed] transition-colors"
-          >
-            Contact
-          </Link>
+
+          <Link to="/blog">Blog</Link>
+          <Link to="/careers">Careers</Link>
+          <Link to="/contact">Contact</Link>
+
+          {/* DESKTOP SUPPORT */}
           <Link
             to="/support"
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#6495ed] text-white h-10 px-4 py-2 hover:bg-[#4a78d0]"
+            className="bg-[#6495ed] text-white px-4 py-2 rounded-md hover:bg-[#4a78d0]"
           >
             Support
           </Link>
         </div>
 
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        {/* MOBILE BUTTON */}
+        <div className="md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background shadow-lg animate-fade-down">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link
-              to="/about"
-              className="text-foreground hover:text-[#6495ed] transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About Us
-            </Link>
-            
-            {/* Services dropdown for mobile */}
-            <div className="relative">
-              <button
-                className="flex items-center justify-between w-full text-left text-foreground hover:text-[#6495ed] transition-colors py-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const dropdown = e.currentTarget.nextElementSibling;
-                  dropdown.classList.toggle('hidden');
-                }}
-              >
-                Services
-                <ChevronDown size={16} />
-              </button>
-              <ul className="pl-4 hidden space-y-2 mt-2">
-                {services.map((service, i) => (
-                  <li key={i}>
-                    <Link
-                      to={service.href}
-                      className="block py-1 text-foreground hover:text-[#6495ed] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.title}
-                    </Link>
-                  </li>
+        <div className="md:hidden bg-white shadow-lg">
+          <div className="flex flex-col p-4 space-y-4">
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+
+            {/* Services */}
+            <details>
+              <summary className="cursor-pointer flex justify-between">
+                Services <ChevronDown size={16} />
+              </summary>
+              <div className="pl-4 mt-2 space-y-2">
+                {services.map((s, i) => (
+                  <Link key={i} to={s.href} onClick={() => setIsMenuOpen(false)}>
+                    {s.title}
+                  </Link>
                 ))}
-              </ul>
-            </div>
-            
-            {/* Products dropdown for mobile */}
-            <div className="relative">
-              <button
-                className="flex items-center justify-between w-full text-left text-foreground hover:text-[#6495ed] transition-colors py-2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const dropdown = e.currentTarget.nextElementSibling;
-                  dropdown.classList.toggle('hidden');
-                }}
-              >
-                Products
-                <ChevronDown size={16} />
-              </button>
-              <ul className="pl-4 hidden space-y-2 mt-2">
-                {products.map((product, i) => (
-                  <li key={i}>
-                    <Link
-                      to={product.href}
-                      className="block py-1 text-foreground hover:text-[#6495ed] transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {product.title}
-                    </Link>
-                  </li>
+              </div>
+            </details>
+
+            {/* Products */}
+            <details>
+              <summary className="cursor-pointer flex justify-between">
+                Products <ChevronDown size={16} />
+              </summary>
+              <div className="pl-4 mt-2 space-y-2">
+                {products.map((p, i) => (
+                  <Link key={i} to={p.href} onClick={() => setIsMenuOpen(false)}>
+                    {p.title}
+                  </Link>
                 ))}
-              </ul>
-            </div>
-            
+              </div>
+            </details>
+
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+            <Link to="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+
+            {/* ✅ MOBILE SUPPORT BUTTON (FIXED) */}
             <Link
-              to="/blog"
-              className="text-foreground hover:text-[#6495ed] transition-colors py-2"
+              to="/support"
               onClick={() => setIsMenuOpen(false)}
+              className="w-full text-center bg-[#6495ed] text-white py-3 rounded-lg font-semibold hover:bg-[#4a78d0]"
             >
-              Blog
-            </Link>
-            <Link
-              to="/careers"
-              className="text-foreground hover:text-[#6495ed] transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Careers
-            </Link>
-            <Link
-              to="/contact"
-              className="text-foreground hover:text-[#6495ed] transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
+              Support
             </Link>
 
-            {/* Legal pages for mobile */}
-            <div className="pt-2 mt-2 border-t border-gray-200">
-              {legalPages.map((page, i) => (
+            {/* Legal */}
+            <div className="pt-3 border-t">
+              {legalPages.map((l, i) => (
                 <Link
                   key={i}
-                  to={page.href}
-                  className="block py-1 text-sm text-gray-500 hover:text-[#6495ed] transition-colors"
+                  to={l.href}
                   onClick={() => setIsMenuOpen(false)}
+                  className="block text-sm text-gray-500"
                 >
-                  {page.title}
+                  {l.title}
                 </Link>
               ))}
             </div>
