@@ -5,22 +5,22 @@ const carouselContent = [
   {
     image: "/banner1.webp",
     title: "All-in-One ERP Software for Retail & Business Growth",
-    subtitle: "With smart, cloud-based inventory systems, Inexterpsolution enables retailers to increase productivity and profitability."
+    subtitle: "Use one powerful ERP Software that integrates with Indian SMEs for easy management of inventory, sales, accounting, POS and CRM."
   },
   {
     image: "/banner2.webp",
     title: "Smart ERP Solutions for Billing, Inventory, Accounting & More",
-    subtitle: "Harness the power of AI-driven analytics to predict demand, reduce waste, and ensure your products are always in stock. Our solutions provide end-to-end visibility across your supply chain."
+    subtitle: "Simplify your business processes using the iNextERP platform’s streamlined ERP solutions which include invoicing, inventory control, cost tracking, and customer service management tools."
   },
   {
     image: "/banner3.webp",
     title: "Run Your Business Smarter with iNextERP ERP Software",
-    subtitle: "Equip your team with intuitive dashboards and real-time reports. From inventory tracking to sales performance, our tools turn complex data into actionable insights for smarter decision-making."
+    subtitle: "Boost efficiency, track performance, and simplify workflows across sales, inventory, finance, and HR with iNextERP."
   },
   {
     image: "/banner4.webp",
     title: "Power Your Enterprise with Cloud-Ready ERP Software",
-    subtitle: "Unify your in-store and online operations with a single, integrated platform. Enhance customer satisfaction by ensuring consistent stock availability and faster order fulfillment."
+    subtitle: "Use iNextERP to provide you with access to any of the modules you need when you have an internet connection, giving you the ability to scale your retail, distribution, or manufacturing operation."
   }
 ];
 
