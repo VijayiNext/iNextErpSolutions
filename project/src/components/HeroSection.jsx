@@ -4,22 +4,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 const carouselContent = [
   {
     image: "/banner1.webp",
-    title: "ERP Software for Retail and Business by iNextERP Solutions",
+    title: "All-in-One ERP Software for Retail & Business Growth",
     subtitle: "With smart, cloud-based inventory systems, Inexterpsolution enables retailers to increase productivity and profitability."
   },
   {
     image: "/banner2.webp",
-    title: "Optimize Your Supply Chain with Real-Time Insights",
+    title: "Smart ERP Solutions for Billing, Inventory, Accounting & More",
     subtitle: "Harness the power of AI-driven analytics to predict demand, reduce waste, and ensure your products are always in stock. Our solutions provide end-to-end visibility across your supply chain."
   },
   {
     image: "/banner3.webp",
-    title: "Optimize Your Supply Chain with Real-Time Insights",
+    title: "Run Your Business Smarter with iNextERP ERP Software",
     subtitle: "Equip your team with intuitive dashboards and real-time reports. From inventory tracking to sales performance, our tools turn complex data into actionable insights for smarter decision-making."
   },
   {
     image: "/banner4.webp",
-    title: "Deliver a Seamless Omnichannel Experience",
+    title: "Power Your Enterprise with Cloud-Ready ERP Software",
     subtitle: "Unify your in-store and online operations with a single, integrated platform. Enhance customer satisfaction by ensuring consistent stock availability and faster order fulfillment."
   }
 ];
