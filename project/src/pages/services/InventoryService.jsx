@@ -18,9 +18,45 @@ const InventoryService = () => {
   const y = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [100, 0, 0, 100]);
   const scale = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0.8, 1, 1, 0.8]);
 
+  /* =========================
+     SEO + SCROLL FIX (ADDED)
+  ========================== */
   useEffect(() => {
-    // Reset scroll position when component mounts
+    // Reset scroll position
     window.scrollTo(0, 0);
+
+    // Page title
+    document.title =
+      "Inventory Management Software for SMEs | iNextERP Solutions";
+
+    // Meta description
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    metaDescription.setAttribute(
+      "content",
+      "Inventory management software by iNextERP Solutions to track stock, avoid stockouts, manage warehouses, and improve operational efficiency for retail, distribution, and manufacturing businesses."
+    );
+
+    // Canonical URL
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute(
+      "href",
+      "https://www.inexterpsolutions.com/services/inventory"
+    );
   }, []);
 
   const fadeInUpVariants = {
@@ -69,7 +105,7 @@ const InventoryService = () => {
             <div className="absolute -top-96 -right-96 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/30 to-indigo-100/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
             <div className="absolute -bottom-96 -left-96 w-[800px] h-[800px] bg-gradient-to-br from-blue-100/30 to-indigo-100/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
@@ -80,15 +116,15 @@ const InventoryService = () => {
                 <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
                   Inventory Management Software
                 </span>
-                
+
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-indigo-700">
                   Inventory Management Software | iNextERP Solutions
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
                   Efficient inventory management software to track stock, avoid stockouts & manage warehouses. Ideal for retail, distribution & manufacturing businesses.
                 </p>
-                
+
                 <Link to="/contact" className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" className="rounded-full px-8 py-6 text-base">
                     Get Started
@@ -102,7 +138,7 @@ const InventoryService = () => {
         {/* Key Features */}
         <section className="py-24 bg-white relative" ref={targetRef}>
           <div className="container mx-auto px-4">
-            <motion.div 
+            <motion.div
               style={{ opacity, y, scale }}
               className="text-center max-w-3xl mx-auto mb-16"
             >
@@ -152,7 +188,7 @@ const InventoryService = () => {
                     <p className="text-lg mb-6">
                       Use the robust procurement options to keep your inventory efficient and well-organized. Manage your inventory while on the go and take prompt action to increase returns with mobile access and dynamic reporting.
                     </p>
-                    
+
                     <p className="text-lg mb-6">
                       Handle online orders from the closest showrooms and manage your multi-channel inventory with ease, providing customers with quick delivery and flawless service.
                     </p>
@@ -164,7 +200,7 @@ const InventoryService = () => {
                     </div>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -173,9 +209,9 @@ const InventoryService = () => {
                   className="md:w-1/2"
                 >
                   <div className="rounded-xl overflow-hidden shadow-xl">
-                    <img 
-                      src="/Services/inventoryManagement1.webp" 
-                      alt="Inventory Management Interface" 
+                    <img
+                      src="/Services/inventoryManagement1.webp"
+                      alt="Inventory Management Interface"
                       className="w-full h-auto object-cover"
                     />
                   </div>
@@ -204,13 +240,13 @@ const InventoryService = () => {
                     <p className="text-lg mb-6">
                       Keep track of your inventory across multiple sales channels, from physical stores to e-commerce platforms, all in one centralized system.
                     </p>
-                    
+
                     <p className="text-lg mb-6">
                       Our real-time analytics provide deep insights into stock performance, helping you make data-driven decisions to optimize your inventory and maximize profits.
                     </p>
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -219,9 +255,9 @@ const InventoryService = () => {
                   className="md:w-1/2"
                 >
                   <div className="rounded-xl overflow-hidden shadow-xl">
-                    <img 
-                      src="/Services/inventoryManagement2.webp" 
-                      alt="Inventory Analytics Dashboard" 
+                    <img
+                      src="/Services/inventoryManagement2.webp"
+                      alt="Inventory Analytics Dashboard"
                       className="w-full h-auto object-cover"
                     />
                   </div>
