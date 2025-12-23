@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import { Truck, Boxes, Factory, ClipboardList, BarChart3, Cog } from "lucide-react";
@@ -11,7 +10,40 @@ import { Link } from 'react-router-dom';
 
 const SupplyChainService = () => {
   useEffect(() => {
+    // Reset scroll position
     window.scrollTo(0, 0);
+
+    // ===== SEO START =====
+    document.title =
+      "Supply Chain & Manufacturing ERP Software | iNextERP Solutions";
+
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    metaDescription.setAttribute(
+      "content",
+      "Supply chain and manufacturing ERP software by iNextERP Solutions for Indian industries. Manage job cards, raw materials, production planning, quality control, and real-time insights with ease."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute(
+      "href",
+      "https://www.inexterpsolutions.com/services/supply-chain"
+    );
+    // ===== SEO END =====
   }, []);
 
   const features = [
@@ -78,7 +110,8 @@ const SupplyChainService = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-36 pb-20 bg-cover bg-center relative text-white overflow-hidden"
+        <section
+          className="pt-36 pb-20 bg-cover bg-center relative text-white overflow-hidden"
           style={{ backgroundImage: `url('/banner3.webp')` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/80"></div>
@@ -106,7 +139,9 @@ const SupplyChainService = () => {
                 transition={{ duration: 0.7, delay: 0.4 }}
               >
                 <Link to={"/contact"}>
-                  <Button size="lg" className="rounded-full">Get Started</Button>
+                  <Button size="lg" className="rounded-full">
+                    Get Started
+                  </Button>
                 </Link>
               </motion.div>
             </div>
@@ -141,7 +176,9 @@ const SupplyChainService = () => {
                         <div className="bg-blue-50 rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
                           {icons && icons[index % icons.length]}
                         </div>
-                        <h3 className="text-lg font-semibold">{feature.title}</h3>
+                        <h3 className="text-lg font-semibold">
+                          {feature.title}
+                        </h3>
                       </div>
                       <p className="text-gray-600">{feature.description}</p>
                     </motion.div>
@@ -260,7 +297,9 @@ const SupplyChainService = () => {
                   <div className="bg-blue-50 rounded-full p-3 inline-flex w-12 h-12 items-center justify-center mb-4">
                     {icons && icons[(index + features.length) % icons.length]}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {benefit.title}
+                  </h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
