@@ -28,7 +28,7 @@ const CloudService = () => {
 
     metaDescription.setAttribute(
       'content',
-      'Secure, scalable cloud computing solutions by iNextERP Solutions for retail businesses. Access inventory, sales, and operations data anytime with enterprise-grade security and high availability.'
+      'Secure, scalable cloud computing solutions by iNextERP Solutions for retail businesses. Access inventory, sales, and operations data from anywhere with enterprise-grade security and high availability.'
     );
 
     let canonical = document.querySelector("link[rel='canonical']");
@@ -138,21 +138,21 @@ const CloudService = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
-
+      
       <main className="flex-grow pt-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary/10 to-background py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1
-                  ref={titleRef}
+                <h1 
+                  ref={titleRef} 
                   className="text-3xl md:text-5xl font-bold mb-6 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
                 >
                   Cloud Computing Solutions
                 </h1>
-                <p
-                  ref={contentRef}
+                <p 
+                  ref={contentRef} 
                   className="text-lg text-muted-foreground mb-8 opacity-0 translate-y-10 transition-all duration-1000 ease-out delay-100"
                 >
                   Secure, scalable cloud infrastructure optimized for retail inventory and operations management. Access your inventory, sales, and customer data from anywhere with our reliable cloud services designed specifically for the retail industry.
@@ -169,9 +169,9 @@ const CloudService = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden relative">
-                  <img
-                    src="/Services/cloud computing 1.webp"
-                    alt="Cloud Computing Infrastructure"
+                  <img 
+                    src="/Services/cloud computing 1.webp" 
+                    alt="Cloud Computing Infrastructure" 
                     className="w-full object-fill transform transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -180,12 +180,12 @@ const CloudService = () => {
           </div>
         </section>
 
-        {/* Features, Benefits, FAQs, CTA – UNCHANGED */}
-        {/* Your remaining JSX stays exactly the same */}
+        {/* ALL OTHER SECTIONS UNCHANGED */}
+        {/* Features, Benefits, FAQs, CTA */}
 
         <CTA />
       </main>
-
+      
       <Footer />
     </div>
   );
