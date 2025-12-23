@@ -15,6 +15,35 @@ const CloudService = () => {
   useEffect(() => {
     // Ensure scroll to top on page load
     window.scrollTo(0, 0);
+
+    // ===== SEO START =====
+document.title =
+  "Cloud Computing Solutions for Retail Businesses | iNextERP Solutions";
+
+let metaDescription = document.querySelector('meta[name="description"]');
+if (!metaDescription) {
+  metaDescription = document.createElement('meta');
+  metaDescription.setAttribute('name', 'description');
+  document.head.appendChild(metaDescription);
+}
+
+metaDescription.setAttribute(
+  'content',
+  'Secure, scalable cloud computing solutions by iNextERP Solutions for retail businesses. Access inventory, sales, and operations data from anywhere with enterprise-grade security.'
+);
+
+let canonical = document.querySelector("link[rel='canonical']");
+if (!canonical) {
+  canonical = document.createElement('link');
+  canonical.setAttribute('rel', 'canonical');
+  document.head.appendChild(canonical);
+}
+
+canonical.setAttribute(
+  'href',
+  'https://www.inexterpsolutions.com/services/cloud'
+);
+// ===== SEO END =====
     
     const observer = new IntersectionObserver(
       (entries) => {
