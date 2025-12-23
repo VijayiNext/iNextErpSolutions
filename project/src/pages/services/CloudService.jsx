@@ -15,7 +15,7 @@ const CloudService = () => {
     // Ensure scroll to top on page load
     window.scrollTo(0, 0);
 
-    // ===== SEO START =====
+    /* ================= SEO START ================= */
     document.title =
       "Cloud Computing Solutions for Retail Businesses | iNextERP Solutions";
 
@@ -28,7 +28,7 @@ const CloudService = () => {
 
     metaDescription.setAttribute(
       'content',
-      'Secure and scalable cloud computing solutions by iNextERP Solutions for retail businesses. Access inventory, sales, and operations data anytime with enterprise-grade security and high availability.'
+      'Secure, scalable cloud computing solutions by iNextERP Solutions for retail businesses. Access inventory, sales, and operations data anytime with enterprise-grade security and high availability.'
     );
 
     let canonical = document.querySelector("link[rel='canonical']");
@@ -42,7 +42,7 @@ const CloudService = () => {
       'href',
       'https://www.inexterpsolutions.com/services/cloud'
     );
-    // ===== SEO END =====
+    /* ================= SEO END ================= */
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -180,7 +180,8 @@ const CloudService = () => {
           </div>
         </section>
 
-        {/* (rest of your JSX remains EXACTLY the same) */}
+        {/* Features, Benefits, FAQs, CTA – UNCHANGED */}
+        {/* Your remaining JSX stays exactly the same */}
 
         <CTA />
       </main>
