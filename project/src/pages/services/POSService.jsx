@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Navbar from "../../components/Navbar";
@@ -20,7 +19,40 @@ const POSService = () => {
   const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [100, 0, 0, 100]);
 
   useEffect(() => {
+    // Reset scroll position
     window.scrollTo(0, 0);
+
+    // ===== SEO START =====
+    document.title =
+      "POS Billing Software for Retail Stores | iNextERP Solutions";
+
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    metaDescription.setAttribute(
+      "content",
+      "Retail POS billing software by iNextERP Solutions with fast checkout, flexible payments, real-time inventory, GST reports, and powerful sales analytics for modern retail businesses."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute(
+      "href",
+      "https://www.inexterpsolutions.com/services/pos"
+    );
+    // ===== SEO END =====
   }, []);
 
   const benefits = [
@@ -131,13 +163,12 @@ const POSService = () => {
                       Request Demo
                     </Button>
                   </Link>
-                  
+
                   <a href={"#features"}>
                     <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-base border-white bg-transparent text-white hover:bg-white/10">
                       View Features
                     </Button>
                   </a>
-
                 </motion.div>
               </div>
 
@@ -163,10 +194,7 @@ const POSService = () => {
 
         <section className="py-24 bg-white relative" ref={containerRef}>
           <div className="container mx-auto px-4">
-            <motion.div
-              style={{ opacity, y }}
-              className="text-center max-w-3xl mx-auto mb-16"
-            >
+            <motion.div style={{ opacity, y }} className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Designed for Retail Excellence
               </h2>
