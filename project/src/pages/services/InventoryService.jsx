@@ -27,7 +27,7 @@ const InventoryService = () => {
 
     // Page title
     document.title =
-      "Inventory Management Software for SMEs | iNextERP Solutions";
+      "Inventory Management Software | iNextERP Solutions";
 
     // Meta description
     let metaDescription = document.querySelector(
@@ -42,7 +42,7 @@ const InventoryService = () => {
 
     metaDescription.setAttribute(
       "content",
-      "Inventory management software by iNextERP Solutions to track stock, avoid stockouts, manage warehouses, and improve operational efficiency for retail, distribution, and manufacturing businesses."
+      "Efficient inventory management software to track stock, avoid stockouts & manage warehouses. Ideal for retail, distribution & manufacturing businesses"
     );
 
     // Canonical URL
