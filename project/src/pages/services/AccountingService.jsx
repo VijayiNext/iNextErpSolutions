@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -9,7 +8,40 @@ import { Button } from "@/components/ui/button";
 
 const AccountingService = () => {
   useEffect(() => {
+    // Reset scroll position
     window.scrollTo(0, 0);
+
+    // ===== SEO START =====
+    document.title =
+      "Accounting Software for Businesses in India | iNextERP Solutions";
+
+    let metaDescription = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.setAttribute("name", "description");
+      document.head.appendChild(metaDescription);
+    }
+
+    metaDescription.setAttribute(
+      "content",
+      "Accounting software by iNextERP Solutions with inventory integration, multi-branch management, automated vouchers, balance sheets, GST compliance, and real-time financial reporting for Indian businesses."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+
+    canonical.setAttribute(
+      "href",
+      "https://www.inexterpsolutions.com/services/accounting"
+    );
+    // ===== SEO END =====
   }, []);
 
   const features = [
@@ -72,13 +104,14 @@ const AccountingService = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-36 pb-20 bg-cover bg-center relative text-white overflow-hidden" 
+        <section
+          className="pt-36 pb-20 bg-cover bg-center relative text-white overflow-hidden"
           style={{ backgroundImage: `url('/banner1.webp')` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-indigo-900/80"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
@@ -86,7 +119,7 @@ const AccountingService = () => {
               >
                 Use India's Finest Accounting Software to Revolutionize Inventory Management
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -94,12 +127,14 @@ const AccountingService = () => {
               >
                 Inventory management and our accounting software in India work together seamlessly to streamline procedures and produce excellent reporting. By ensuring voucher accuracy and saving up to 60% of your time, this integration frees you up to concentrate on expanding your business.
               </motion.p>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
               >
-                <Button size="lg" className="rounded-full">Get Started</Button>
+                <Button size="lg" className="rounded-full">
+                  Get Started
+                </Button>
               </motion.div>
             </div>
           </div>
@@ -110,7 +145,7 @@ const AccountingService = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="w-full lg:w-1/2">
-                <motion.h2 
+                <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -121,7 +156,7 @@ const AccountingService = () => {
                 </motion.h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
                   {features.map((feature, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -140,8 +175,8 @@ const AccountingService = () => {
                   ))}
                 </div>
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -149,9 +184,9 @@ const AccountingService = () => {
                 className="w-full lg:w-1/2"
               >
                 <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="/Services/Accounting 1.webp" 
-                    alt="Accounting Services" 
+                  <img
+                    src="/Services/Accounting 1.webp"
+                    alt="Accounting Services"
                     className="w-full h-auto"
                   />
                 </div>
@@ -161,7 +196,7 @@ const AccountingService = () => {
             <div className="mt-20">
               <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
                 <div className="w-full lg:w-1/2">
-                  <motion.h2 
+                  <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -194,8 +229,8 @@ const AccountingService = () => {
                     </li>
                   </ul>
                 </div>
-                
-                <motion.div 
+
+                <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -203,9 +238,9 @@ const AccountingService = () => {
                   className="w-full lg:w-1/2"
                 >
                   <div className="rounded-xl overflow-hidden shadow-2xl">
-                    <img 
-                      src="/Services/Accounting 2.webp" 
-                      alt="Financial Analytics" 
+                    <img
+                      src="/Services/Accounting 2.webp"
+                      alt="Financial Analytics"
                       className="w-full h-auto"
                     />
                   </div>
@@ -219,7 +254,7 @@ const AccountingService = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -238,7 +273,7 @@ const AccountingService = () => {
                 Experience transformative advantages with our accounting solution
               </motion.p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
