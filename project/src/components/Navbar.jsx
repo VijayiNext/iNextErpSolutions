@@ -15,9 +15,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -50,6 +48,12 @@ const Navbar = () => {
     { title: 'Terms & Conditions', href: '/terms' },
   ];
 
+  const triggerClass =
+    "bg-transparent px-0 py-0 h-auto font-normal text-base text-black " +
+    "hover:bg-transparent focus:bg-transparent " +
+    "data-[state=open]:bg-transparent data-[state=open]:text-[#1881c4] " +
+    "hover:text-[#6495ed]";
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -59,6 +63,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+        {/* LOGO */}
         <Link to="/" className="flex items-center">
           <img src="/Logo.webp" className="w-16 h-16 mr-3" alt="Logo" />
           <span className="text-2xl md:text-3xl font-bold text-[#1881c4]">
@@ -70,17 +75,21 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link to="/about" className="hover:text-[#6495ed]">About Us</Link>
 
+          {/* SERVICES */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent p-0">
+                <NavigationMenuTrigger className={triggerClass}>
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="p-2">
+                  <ul className="p-2 min-w-[220px]">
                     {services.map((s, i) => (
                       <li key={i}>
-                        <Link to={s.href} className="block p-2 hover:bg-accent">
+                        <Link
+                          to={s.href}
+                          className="block px-3 py-2 rounded hover:bg-accent"
+                        >
                           {s.title}
                         </Link>
                       </li>
@@ -91,17 +100,21 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* PRODUCTS */}
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent p-0">
+                <NavigationMenuTrigger className={triggerClass}>
                   Products
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="p-2">
+                  <ul className="p-2 min-w-[220px]">
                     {products.map((p, i) => (
                       <li key={i}>
-                        <Link to={p.href} className="block p-2 hover:bg-accent">
+                        <Link
+                          to={p.href}
+                          className="block px-3 py-2 rounded hover:bg-accent"
+                        >
                           {p.title}
                         </Link>
                       </li>
@@ -112,9 +125,9 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Link to="/blog">Blog</Link>
-          <Link to="/careers">Careers</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/blog" className="hover:text-[#6495ed]">Blog</Link>
+          <Link to="/careers" className="hover:text-[#6495ed]">Careers</Link>
+          <Link to="/contact" className="hover:text-[#6495ed]">Contact</Link>
 
           {/* DESKTOP SUPPORT */}
           <Link
@@ -139,7 +152,6 @@ const Navbar = () => {
           <div className="flex flex-col p-4 space-y-4">
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
 
-            {/* Services */}
             <details>
               <summary className="cursor-pointer flex justify-between">
                 Services <ChevronDown size={16} />
@@ -153,7 +165,6 @@ const Navbar = () => {
               </div>
             </details>
 
-            {/* Products */}
             <details>
               <summary className="cursor-pointer flex justify-between">
                 Products <ChevronDown size={16} />
@@ -171,7 +182,7 @@ const Navbar = () => {
             <Link to="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
 
-            {/* ✅ MOBILE SUPPORT BUTTON (FIXED) */}
+            {/* MOBILE SUPPORT */}
             <Link
               to="/support"
               onClick={() => setIsMenuOpen(false)}
@@ -180,7 +191,6 @@ const Navbar = () => {
               Support
             </Link>
 
-            {/* Legal */}
             <div className="pt-3 border-t">
               {legalPages.map((l, i) => (
                 <Link
