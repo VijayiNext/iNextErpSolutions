@@ -19,13 +19,13 @@ const Footer = () => {
               Transforming retail operations with intelligent inventory solutions that drive growth and efficiency.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=61565418553156&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
+              <a href="https://www.facebook.com/inexterpsolution/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="https://x.com/InexterpS50262" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
                 <X size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/106386750/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
+              <a href="https://in.linkedin.com/company/inexterp-solutions-pvt-ltd" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="https://www.instagram.com/inexterpsolution/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#6495ed] transition-colors">
