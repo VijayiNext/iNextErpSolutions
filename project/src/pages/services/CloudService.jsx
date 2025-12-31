@@ -188,17 +188,17 @@ canonical.setAttribute(
       <img
         src="/E2ECloud.jpeg"
         alt="E2ECloud.jpeg"
-        className="h-8 grayscale hover:grayscale-0 transition"
+        className="h-12 md:h-14 lg:h-16 opacity-70 grayscale hover:grayscale-0 transition"
       />
       <img
-        src="/public/i2k2.jpeg"
+        src="/i2k2.jpeg"
         alt="i2k2.jpeg"
-        className="h-8 grayscale hover:grayscale-0 transition"
+        className="h-12 md:h-14 lg:h-16 opacity-70 grayscale hover:grayscale-0 transition"
       />
       <img
-        src="/public/aboutus1.webp"
+        src="/aboutus1.webp"
         alt="aboutus1.webp"
-        className="h-8 grayscale hover:grayscale-0 transition"
+        className="h-12 md:h-14 lg:h-16 opacity-70 grayscale hover:grayscale-0 transition"
       />
     </div>
   </div>
