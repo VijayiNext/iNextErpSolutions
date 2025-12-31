@@ -186,8 +186,8 @@ canonical.setAttribute(
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap items-center justify-center gap-10 opacity-70">
       <img
-        src="/public/E2E Cloud.jpeg"
-        alt="E2E Cloud.jpeg"
+        src="/public/E2ECloud.jpeg"
+        alt="E2ECloud.jpeg"
         className="h-8 grayscale hover:grayscale-0 transition"
       />
       <img
