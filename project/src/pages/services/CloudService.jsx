@@ -181,6 +181,29 @@ canonical.setAttribute(
           </div>
         </section>
 
+        {/* Trusted Brands Section */}
+<section className="bg-white py-10">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-wrap items-center justify-center gap-10 opacity-70">
+      <img
+        src="/public/E2E Cloud.jpeg"
+        alt="E2E Cloud.jpeg"
+        className="h-8 grayscale hover:grayscale-0 transition"
+      />
+      <img
+        src="/public/i2k2.jpeg"
+        alt="i2k2.jpeg"
+        className="h-8 grayscale hover:grayscale-0 transition"
+      />
+      <img
+        src="/public/aboutus1.webp"
+        alt="aboutus1.webp"
+        className="h-8 grayscale hover:grayscale-0 transition"
+      />
+    </div>
+  </div>
+</section>
+
         {/* Features Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
