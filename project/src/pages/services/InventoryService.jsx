@@ -1,3 +1,4 @@
+import { HelmetProvider } from "react-helmet-async";
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Navbar from "../../components/Navbar";
